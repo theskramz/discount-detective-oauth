@@ -40,7 +40,7 @@
   const state = urlParams.get('state');
 
   if (code && state) {
-    fetch('http://34.86.79.120:3000/api/oauth2callback?code=' + code + '&state=' + state, {
+    fetch('https://34.86.79.120:3000/api/oauth2callback?code=' + code + '&state=' + state, {
       method: 'GET',
       mode: 'no-cors'
     })
