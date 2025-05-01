@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorize Discount Detective</title>
+    <style>
+        body { font-family: sans-serif; margin: 2em; }
+        h1 { color: #5865F2; } /* Discord brand color */
+        p { line-height: 1.6; }
+        ul { list-style-type: disc; margin-left: 2em; }
+        .important { font-weight: bold; color: #23a553; } /* A green color for emphasis */
+    </style>
+</head>
+<body>
+    <h1>Welcome to Discount Detective!</h1>
+    <p>Thank you for connecting your Gmail account. Please note the following:</p>
+    <p class="important">Discount Detective will only analyze your Gmail's 'Promotions' tab to alert you about discount codes and coupons via Discord. We respect your privacy and will not access any other parts of your email without your explicit future command.</p>
+
+    <h2>Available Discord Commands:</h2>
+    <ul>
+        <li><code>/connect_gmail</code>: Connect your Gmail account to the bot.</li>
+        <li><code>/block_sender [email or domain]</code>: Block emails from a specific sender.</li>
+        <li><code>/unblock_sender [email or domain]</code>: Unblock a previously blocked sender.</li>
+        <li><code>/list_blocked</code>: View your list of blocked senders.</li>
+        <li><code>/disconnect_gmail</code>: Disconnect your Gmail and remove your data.</li>
+        <li><code>/focus_company [company_name]</code>: Focus on a specific company for highlighted notifications.</li>
+        <li><code>/unfocus_company [company_name]</code>: Remove a company from your focused list.</li>
+        <li><code>/list_focused</code>: View your list of focused companies.</li>
+        <li><code>/help</code>: Shows this list of commands and descriptions.</li>
+    </ul>
+
+    <p class="important">After you authorize, you can close this page. Discount Detective will start working in Discord.</p>
+
+    <p>If you wish to remove the bot and delete your data at any time, use the <code>/disconnect_gmail</code> command in Discord.</p>
+</body>
+</html>
