@@ -1,5 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const code = urlParams.get('code');
+  const state = urlParams.get('state');
+
+  if (code && state) {
+    fetch('http://YOUR_VM_EXTERNAL_IP:3000/api/oauth2callback?code=' + code + '&state=' + state, {
+      method: 'GET',
+      mode: 'no-cors'
+    })
+    .then(response => {
+      console.log('Authorization code sent to bot!');
+      // You can optionally display a success message here
+    })
+    .catch(error => {
+      console.error('Error sending authorization code to bot:', error);
+      // You can optionally display an error message here
+    });
+  } else if (urlParams.get('error')) {
+    console.error('Google OAuth error:', urlParams.get('error'));
+    // You can optionally display an error here
+  }
+</script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
